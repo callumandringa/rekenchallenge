@@ -1,0 +1,199 @@
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+.scene-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: grey; /* Light grey with some transparency */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Ensures the background only covers the text */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #808080;
+    /* Grey background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #505050;
+    /* Darker grey on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge button on hover */
+}
+
+.puzzle-modal {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.puzzle-question {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.puzzle-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.puzzle-input:focus {
+    border-color: #505050;
+    outline: none;
+}
+
+.btn-check {
+    background-color: #a9a9a9;
+    /* Light gray */
+}
+
+.btn-check:hover {
+    background-color: #696969;
+    /* Dim gray */
+}
+
+.btn-back {
+    background-color: #d3d3d3;
+    /* Lighter gray */
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    background-color: #808080;
+    /* Gray */
+}
+
+.btn-aardbol,
+.btn-bed,
+.btn-kaart,
+.btn-koffer {
+    background-color: #808080;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+    opacity: 0.3;
+}
+
+.btn-aardbol:hover,
+.btn-bed:hover,
+.btn-kaart:hover,
+.btn-koffer:hover {
+    background-color: #505050;
+    transform: scale(1.05);
+
+    opacity: 1;
+}
+
+.btn-aardbol {
+    position: absolute;
+    top: 30px;
+    left: -430px;
+}
+
+.btn-bed {
+    position: absolute;
+    top: 140px;
+    right: -400px;
+}
+
+.btn-kaart {
+    position: absolute;
+    bottom: 260px;
+    left: 10px;
+}
+
+.btn-koffer {
+    position: absolute;
+    top: 340px;
+    left: -430px;
+}
+
+
+@media (max-width: 1200px) {
+    .btn-aardbol {
+        left: -300px;
+    }
+
+    .btn-bed {
+        right: -300px;
+    }
+
+    .btn-koffer {
+        left: -300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .btn-aardbol {
+        left: -200px;
+    }
+
+    .btn-bed {
+        right: -200px;
+    }
+
+    .btn-koffer {
+        left: -200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-aardbol,
+    .btn-bed,
+    .btn-kaart,
+    .btn-koffer {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
